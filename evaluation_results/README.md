@@ -7,7 +7,7 @@ The index benchmark was compiled with `clang 9.0.1-12` and the options `-O3` `-m
 We used the C++ standard library version `libstdc++.so.6.0.28`.
 
 # Evaluation Results
-The content of this directory is complementary to our submission of the GvDB21 workshops.
+The content of this directory is complementary to our submission to the GvDB21 workshop.
 We provide the descriptions of all benchmark cases and the evaluation graphs as PDF files in this directory.
 
 In terms of lookup duration evaluations, we used one million lookup operations in the respective benchmark cases.
@@ -44,8 +44,8 @@ These preparations are not included in the time measurement.
 In this benchmark case, the execution time required to insert a given sequence of index entries using the bulk load operation is measured.
 Before the execution and measurement, the data structure is initialized using the constructor.
 In addition to the execution time consideration, the memory consumption required by the data structure to store the index entries is measured.
-Therefore, similar to the \emph{Insert} benchmark case, the allocated memory is measured before the initialization of the data structure and after inserting the index entries.
+Therefore, similar to the *Insert* benchmark case, the allocated memory is measured before the initialization of the data structure and after inserting the index entries.
 The difference of the allocated memory values is considered as memory consumption of the data structure. 
 
 ### Bulk Insert
-This case is similar to case \emph{Bulk Load}, with the difference that in this case, the bulk insert operation is used instead of the bulk load operation.
+This case is similar to case *Bulk Load*, with the difference that in this case, the bulk insert operation is used instead of the bulk load operation.

@@ -1,0 +1,57 @@
+[submodule "third_party/cpplint"]
+	path = third_party/cpplint
+	url = git@github.com:cpplint/cpplint.git
+[submodule "third_party/nlohmann_json"]
+	path = third_party/nlohmann_json
+	url = git@github.com:nlohmann/json.git
+[submodule "third_party/jemalloc"]
+	path = third_party/jemalloc
+	url = git@github.com:jemalloc/jemalloc.git
+[submodule "third_party/cpp-btree"]
+	path = third_party/cpp-btree
+	url = https://github.com/mrks/cpp-btree
+[submodule "third_party/tlx"]
+	path = third_party/tlx
+	url = git@github.com:tlx/tlx.git
+[submodule "third_party/abseil-cpp"]
+	path = third_party/abseil-cpp
+	url = git@github.com:abseil/abseil-cpp.git
+[submodule "third_party/bb-tree"]
+	path = third_party/bb-tree
+	url = git@github.com:flippingbits/bb-tree.git
+[submodule "third_party/masstree-beta"]
+	path = third_party/masstree-beta
+	url = git@github.com:jimdb-org/masstree-beta.git
+[submodule "third_party/phtree-cpp"]
+	path = third_party/phtree-cpp
+	url = git@github.com:improbable-eng/phtree-cpp.git
+[submodule "third_party/skip_list"]
+	path = third_party/skip_list
+	url = git@github.com:petegoodliffe/skip_list.git
+[submodule "third_party/BwTree"]
+	path = third_party/BwTree
+	url = git@github.com:mweisgut/BwTree.git
+[submodule "third_party/cssl"]
+	path = third_party/cssl
+	url = git@github.com:mweisgut/cssl.git
+[submodule "third_party/robin-map"]
+	path = third_party/robin-map
+	url = git@github.com:Tessil/robin-map.git
+[submodule "third_party/sparse-map"]
+	path = third_party/sparse-map
+	url = git@github.com:Tessil/sparse-map.git
+[submodule "third_party/robin-hood-hashing"]
+	path = third_party/robin-hood-hashing
+	url = git@github.com:martinus/robin-hood-hashing.git
+[submodule "third_party/adaptive-radix-tree"]
+	path = third_party/adaptive-radix-tree
+	url = git@github.com:rafaelkallis/adaptive-radix-tree.git
+[submodule "third_party/ARTSynchronized"]
+	path = third_party/ARTSynchronized
+	url = git@github.com:mweisgut/ARTSynchronized.git
+[submodule "third_party/googletest"]
+	path = third_party/googletest
+	url = git@github.com:google/googletest.git
+[submodule "third_party/judy-template"]
+	path = third_party/judy-template
+	url = git@github.com:mweisgut/judy-template.git

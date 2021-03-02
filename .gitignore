@@ -1,0 +1,6 @@
+bdeb/
+bdebug/
+bwithDebInfo/
+resources/data
+scripts/__pycache__
+results/**/*.pdf

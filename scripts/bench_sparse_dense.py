@@ -18,18 +18,25 @@ def run_benchmark(key_type, iterations, data_file, eq_lookup_file, rg_lookup_fil
 
 
 def main():
-    if len(sys.argv) != 5:
+    checkout_commits = False
+    TID_uint32_dense_commit = None
+    TID_uint64_dense_commit = None
+    TID_uint32_sparse_commit = None
+    TID_uint64_sparse_commit = None
+
+    if len(sys.argv) == 5:
+        checkout_commits = True
+        TID_uint32_dense_commit = sys.argv[1]
+        TID_uint64_dense_commit = sys.argv[2]
+        TID_uint32_sparse_commit = sys.argv[3]
+        TID_uint64_sparse_commit = sys.argv[4]
+    elif len(sys.argv) != 1:
         exit(
             "Usage: "
             + sys.argv[0]
-            + " <commit: 32 bit tid, dense> <commit: 64 bit tid, dense>"
-            + " <commit: 32 bit tid, sparse> <commit: 64 bit tid, sparse>"
+            + " [<commit: 32 bit tid, dense> <commit: 64 bit tid, dense>"
+            + " <commit: 32 bit tid, sparse> <commit: 64 bit tid, sparse>]"
         )
-
-    TID_uint32_dense_commit = sys.argv[1]
-    TID_uint64_dense_commit = sys.argv[2]
-    TID_uint32_sparse_commit = sys.argv[3]
-    TID_uint64_sparse_commit = sys.argv[4]
 
     # STEP 1: stored files with index in a dataframe
     tuples = []
@@ -73,18 +80,23 @@ def main():
     for distribution in distributions:
         # currently supported key types: "uint32", "uint64"
         for value_type in ["uint64"]:
-            if value_type == "uint32" and distribution == "dense":
-                subprocess.run(["git", "checkout", TID_uint32_dense_commit])
-            elif value_type == "uint64" and distribution == "dense":
-                subprocess.run(["git", "checkout", TID_uint64_dense_commit])
-            elif value_type == "uint32" and distribution == "sparse":
-                subprocess.run(["git", "checkout", TID_uint32_sparse_commit])
-            elif value_type == "uint64" and distribution == "sparse":
-                subprocess.run(["git", "checkout", TID_uint64_sparse_commit])
-            else:
-                exit(
-                    "Fail: unsupported combination (value type|distribution): (" + value_type + "|" + distribution + ")"
-                )
+            if checkout_commits:
+                if value_type == "uint32" and distribution == "dense":
+                    subprocess.run(["git", "checkout", TID_uint32_dense_commit])
+                elif value_type == "uint64" and distribution == "dense":
+                    subprocess.run(["git", "checkout", TID_uint64_dense_commit])
+                elif value_type == "uint32" and distribution == "sparse":
+                    subprocess.run(["git", "checkout", TID_uint32_sparse_commit])
+                elif value_type == "uint64" and distribution == "sparse":
+                    subprocess.run(["git", "checkout", TID_uint64_sparse_commit])
+                else:
+                    exit(
+                        "Fail: unsupported combination (value type|distribution): ("
+                        + value_type
+                        + "|"
+                        + distribution
+                        + ")"
+                    )
 
             subprocess.run(["git", "submodule", "update", "--init", "--recursive"])
             subprocess.run(["ninja"])

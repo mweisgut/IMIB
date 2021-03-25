@@ -15,7 +15,7 @@ Furthermore, the benchmark cases for evaluating inserts, bulk inserts, and bulk 
 | [RH Flat Map](https://github.com/martinus/robin-hood-hashing)    |      hash map     | `robin_hood::unordered_flat_map` |
 | [RH Node Map](https://github.com/martinus/robin-hood-hashing)    |      hash map     | `robin_hood::unordered_node_map` |
 | [TSL Robin Map](https://github.com/Tessil/robin-map)  |      hash map     | `tsl::robin_map`                 |
-| [TSL Sparse Map](https://github.com/Tessil/sparse-mapp) |      hash map     | `tsl::sparse_map`                | 
+| [TSL Sparse Map](https://github.com/Tessil/sparse-map) |      hash map     | `tsl::sparse_map`                | 
 | [STD Hash Map](https://en.cppreference.com/w/cpp/container/unordered_map)   |      hash map     | `std::unordered_map`             |
 
 ## Requirements

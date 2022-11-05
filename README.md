@@ -69,3 +69,16 @@ If multiple json result files are generated for all four combinations of sparse/
 ```
 ../scripts/plot_multi_json_results.py subplots
 ```
+
+## Cite Our Work
+If you use this benchmark framework in your work, please cite us.
+```bibtex
+@inproceedings{Weisgut21ExperimentalIndexEvaluation,
+  author    = {Marcel Weisgut},
+  title     = {Experimental Index Evaluation for Partial Indexes in Horizontally
+               Partitioned In-Memory Databases},
+  booktitle = {Proceedings of the 32nd GI-Workshop on Foundations of Databases (Grundlagen von Datenbanken)},
+  series    = {{CEUR} Workshop Proceedings},
+  year      = {2021},
+}
+```
